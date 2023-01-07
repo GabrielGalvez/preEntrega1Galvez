@@ -37,7 +37,7 @@ const ItemCount = (props) =>{
             <div className='box-count' >
                 <div className='box-count-children'>
                     <button onClick={addOne}>+</button>
-                    <p>{count}</p>
+                    <p className='item-count'>{count}</p>
                     <button onClick={disOne}>-</button>
                 </div>
                 <button onClick={onAdd}>On add</button>
