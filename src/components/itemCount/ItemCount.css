@@ -1,0 +1,19 @@
+.box-count{
+    display:flex;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+}
+
+.box-count button{
+    background-color: rgb(25, 0, 255);
+    border: none;
+    color: rgb(171, 224, 243);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.box-count-children{
+    display:flex;
+    flex-direction: row;
+}

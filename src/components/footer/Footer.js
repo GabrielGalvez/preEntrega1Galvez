@@ -7,7 +7,7 @@ import './Footer.css';
 //Core
 
 /*Logica*/
-const Footer = (props) =>{//funcion constructora
+const Footer = () =>{//funcion constructora
 
     
     //retorno que se va a renderizar
