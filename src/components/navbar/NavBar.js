@@ -16,7 +16,7 @@ const NavBar = (props) => {//funcion constructora
         <header className='container bg-dark bg-gradient text-primary'>
             <h1 className='d-flex justify-content-center'>Bienvenidos a AppGalvez </h1>
             <p>Fecha actual: {fecha.getDate()}</p>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#a">Home</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
