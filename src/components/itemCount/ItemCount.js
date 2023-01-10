@@ -11,7 +11,7 @@ import './ItemCount.css';
 const ItemCount = (props) =>{
     //props.stock = 7
     //No puede restar menos de cero
-    //No pude sumar mas de la cantidad maxima en stock
+    //No puede sumar mas de la cantidad maxima en stock
     //Agregar un manejo de estados
     //useState
     const [count,setCount] = useState(0)
