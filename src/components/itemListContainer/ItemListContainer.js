@@ -4,7 +4,7 @@
 //Estilos
 import './ItemListContainer.css';
 //Componentes
-import ItemCount from '../itemCount/ItemCount.js';
+import ItemList from '../itemList/ItemList.js';
 //Core
 
 /*Logica*/
@@ -14,8 +14,9 @@ const ItemListContainer = (props) =>{//funcion constructora
     //retorno que se va a renderizar
     return(
             <div style={{backgroundColor:"#3393dc"}}>
-                Esta es la nueva tienda AppGalvez, {props.greeting}!
-                <ItemCount stock="7"/>
+                <h2>Esta es la nueva tienda AppGalvez, {props.greeting}!</h2>
+                
+                <ItemList/>
             </div>
     );
 

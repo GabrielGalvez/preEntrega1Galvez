@@ -25,7 +25,7 @@ const NavBar = (props) => {//funcion constructora
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link" href="#a">Producto</a>
+                                <a className="nav-link" href="#a">Productos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#a">Categoria</a>
