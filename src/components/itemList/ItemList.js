@@ -1,6 +1,7 @@
 /*Importaciones*/
 
 //Modulos
+
 //Estilos
 import './ItemList.css';
 //Componentes
@@ -8,8 +9,12 @@ import Item from '../item/Item.js';
 //Core
 
 /*Logica*/
-const ItemList = () => {
-        //llamada a array de objetos
+const ItemList = (props) => {
+    
+    
+    
+    
+    //llamada a array de objetos
     const listaDeProductos = [
         {
             id:1,
@@ -45,19 +50,25 @@ const ItemList = () => {
         },
     ]
 //Tenemos un retraso de informacion
+let productosRenderizables = []
+if(props.categoriaName === "all"){
+    productosRenderizables = listaDeProductos.map(productos => <Item key={productos.id} 
+        id={"Producto" + productos.id} data={productos}/>)
+}else{
+    const productosPorCategoria = listaDeProductos.filter(e=> e.categoria === props.categoriaName)
 
-const listaDeProductosRenderizables = listaDeProductos.map(productos => <Item key={productos.id} 
-    id={"Producto" + productos.id} data={productos}/>)
-    //Pasar la informacion real
-    //Mostrar la informacion real
+    productosRenderizables = productosPorCategoria.map(productos => <Item key={productos.id} 
+    id={"Producto" + productos.id} data={productos}/>)}
+
+
+
 
     return(
             <div>
                 <p>Mi ItemList,Gabriel Galvez</p>
-                {listaDeProductosRenderizables}
+                {productosRenderizables}
             </div>
-    );
-
+    )
 }
-/*Exportacion*/
-export default ItemList;
+        /*Exportacion*/
+        export default ItemList;
