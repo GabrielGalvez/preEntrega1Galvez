@@ -10,14 +10,14 @@ import ItemCount from '../itemCount/ItemCount.js';
 /*Logica*/
 const Item = (props) =>{//funcion constructora
 
-    const {nombre,descripcion,categoria,precio,stock} = props.data
+    const {title,category,description,price} = props.data
     return(
             <div>
-                <p>{categoria}</p>
-                <p>{nombre}</p>
-                <p>{descripcion}</p>
-                <p>{precio}</p>
-                <ItemCount stock={stock}/>
+                <p>{category}</p>
+                <p>{title}</p>
+                <p>{description}</p>
+                <p>{price}</p>
+                <ItemCount stock={10}/>
             </div>
     );
 
