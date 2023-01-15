@@ -1,6 +1,7 @@
 /*Importaciones*/
 
 //Modulos
+import { Link } from 'react-router-dom';
 //Estilos
 import './Item.css';
 //Componentes
@@ -10,13 +11,14 @@ import ItemCount from '../itemCount/ItemCount.js';
 /*Logica*/
 const Item = (props) =>{//funcion constructora
 
-    const {title,category,description,price} = props.data
+    const {title, category, description, price, id} = props.data
     return(
             <div>
                 <p>{category}</p>
                 <p>{title}</p>
                 <p>{description}</p>
-                <p>{price}</p>
+                <p>${price}</p>
+                <Link to={`/producto/${id}`}>Ver detalle del producto</Link>
                 <ItemCount stock={10}/>
             </div>
     );
