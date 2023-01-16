@@ -15,7 +15,7 @@ const ItemListContainer = (props) =>{//funcion constructora
 
     //retorno que se va a renderizar
     return(
-            <div style={{backgroundColor:"#3393dc"}}>
+            <div style={{backgroundColor:"#C8FBCF"}}>
                 <h2>Esta es la nueva tienda AppGalvez, {props.greeting}!</h2>
 
                 <div><h1>BANNER PUBLICITARIO</h1></div>

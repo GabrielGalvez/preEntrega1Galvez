@@ -13,6 +13,7 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer.
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import AboutUs from './components/aboutUs/AboutUs.js';
 import Footer from './components/footer/Footer.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Core
 import reportWebVitals from './reportWebVitals';
 
