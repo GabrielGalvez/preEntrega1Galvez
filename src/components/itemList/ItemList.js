@@ -10,13 +10,17 @@ import Item from '../item/Item.js';
 
 /*Logica*/
 const ItemList = (props) => {
+
     const [productos,setProductos] = useState([])
+
     //Nuestra API de productos
 useEffect(()=>{
-    fetch('https://fakestoreapi.com/products')
-                .then(res=>res.json())
-                .then(json=> setProductos(json.map(productos => <Item key={productos.id} id={"Producto" + productos.id} data={productos}/>)))
-},[])
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(json=> setProductos(json.map(productos => <Item key={productos.id} id={"Producto" + productos.id} data={productos}/>)))
+    }
+,[])
+
 
 
 //Tenemos un retraso de informacion

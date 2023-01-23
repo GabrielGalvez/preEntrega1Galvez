@@ -8,13 +8,25 @@ import Button from 'react-bootstrap/Button';
 //Componentes
 import ItemCount from '../itemCount/ItemCount.js';
 import ItemListContainer from '../itemListContainer/ItemListContainer.js';
+import { useState } from 'react';
 //Core
 
 /*Logica*/
 const ItemDetail = (props) =>{//funcion constructora
 
+    const [cantidad, setCantidad] = useState(0)
+
     const {title, category, description, price, id} = props.data
+
+    const tomarCantidad = (numero) =>{
+        setCantidad(numero)
+    }
+
+    const onAdd = () =>{
+        console.log(`Dentro de ItemDetail tengo una cantidad de ${cantidad} y el precio total del producto es ${cantidad*price}`);
+    }
     
+
     //retorno que se va a renderizar
     return(
             <article>
@@ -26,7 +38,8 @@ const ItemDetail = (props) =>{//funcion constructora
                 <Card.Text>{category}</Card.Text>
                 <Card.Text>{description}</Card.Text>
                 <Button variant="primary">${price}</Button>
-                <Card.Text><ItemCount stock={10}/></Card.Text>
+                <ItemCount stock={10} cantidades={tomarCantidad}/>
+                <button onClick={onAdd}>On add</button>
                 </Card.Body>
                 </Card>
                 <h1>MAS PRODUCTOS</h1>

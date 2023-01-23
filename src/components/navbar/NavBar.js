@@ -29,6 +29,12 @@ const NavBar = (props) => {//funcion constructora
                                 <Link className="nav-link" to="/productos">Productos</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link" to="/categoria/jewelery">Jewelery</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/categoria/electronics">Electronics</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/nosotros">Nosotros</Link>
                             </li>
                         </ul>

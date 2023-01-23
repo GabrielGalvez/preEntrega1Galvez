@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 //Estilos
 import './Item.css';
 //Componentes
-import ItemCount from '../itemCount/ItemCount.js';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 //Core
@@ -23,7 +22,6 @@ const Item = (props) =>{//funcion constructora
                 <Card.Text>{description}</Card.Text>
                 <Button variant="primary">${price}</Button>
                 <Link to={`/producto/${id}`}>Ver detalle del producto</Link>
-                <ItemCount stock={10}/>
                 </Card.Body>
                 </Card>
             </div>

@@ -19,20 +19,20 @@ const ItemCount = (props) =>{
     const addOne = () =>{
         if (count < props.stock){
             setCount(count + 1)
+            props.cantidades(count)
         }
     }
     //Funcion de restar uno seteando un minimo de cero
     const disOne = () =>{
         if(count > 0){
             setCount(count - 1)
+            props.cantidades(count)
         }
     }
 
 
-    //Funcion agregar x cantidad de productos
-    const onAdd = () =>{
-        console.log(count);
-    }
+
+
     return(
             <div className='box-count' >
                 <div className='box-count-children'>
@@ -40,7 +40,7 @@ const ItemCount = (props) =>{
                     <p className='item-count'>{count}</p>
                     <button onClick={disOne}>-</button>
                 </div>
-                <button onClick={onAdd}>On add</button>
+                
             </div>
     );
 
