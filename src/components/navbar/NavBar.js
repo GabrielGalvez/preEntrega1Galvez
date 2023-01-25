@@ -37,11 +37,13 @@ const NavBar = (props) => {//funcion constructora
                             <li className="nav-item">
                                 <Link className="nav-link" to="/nosotros">Nosotros</Link>
                             </li>
+                            <li>
+                                <Link to="/carrito"><CartWidget cantidad="10" /></Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <CartWidget cantidad="10" />
         </header>
     );
 

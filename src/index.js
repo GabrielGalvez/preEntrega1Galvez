@@ -2,11 +2,13 @@
 //Modulos
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //Estilos
 import './index.css';
 //Componentes
 //import App from './App';
+import CartProvider from './context/CartContext.js';
+
 import NavBar from './components/navbar/NavBar.js';
 import Home from './components/home/Home.js';
 import ItemListContainer from './components/itemListContainer/ItemListContainer.js';
@@ -14,6 +16,7 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import ItemCategoryContainer from './components/itemCategoryContainer/ItemCategoryContainer.js';
 import AboutUs from './components/aboutUs/AboutUs.js';
 import Footer from './components/footer/Footer.js';
+import Cart from './components/cart/Cart.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Core
 import reportWebVitals from './reportWebVitals';
@@ -23,17 +26,26 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/productos' element={<ItemListContainer greeting='Estamos en la lista de productos'/>}/>
-        <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
-        <Route exact path='/categoria/:categoriaId' element={<ItemCategoryContainer/>}/>
-        <Route exact path='/nosotros' element={<AboutUs/>}/>
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+    <CartProvider>
+
+      <BrowserRouter>
+
+        <NavBar />
+
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/productos' element={<ItemListContainer greeting='Estamos en la lista de productos' />} />
+          <Route exact path='/producto/:productoId' element={<ItemDetailContainer />} />
+          <Route exact path='/categoria/:categoriaId' element={<ItemCategoryContainer />} />
+          <Route exact path='/carrito' element={<Cart/>} />
+          <Route exact path='/nosotros' element={<AboutUs />} />
+        </Routes>
+
+        <Footer />
+
+      </BrowserRouter>
+
+    </CartProvider>
 
   </React.StrictMode>
 );
