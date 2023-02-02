@@ -1,7 +1,7 @@
 /*Importaciones*/
 
 //Modulos
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 //Estilos
 import './ItemList.css';
 //Componentes
@@ -11,27 +11,30 @@ import Item from '../item/Item.js';
 /*Logica*/
 const ItemList = (props) => {
 
-    const [productos,setProductos] = useState([])
+    const [productos, setProductos] = useState([])
 
     //Nuestra API de productos
-useEffect(()=>{
+    useEffect(() => {
         fetch('https://fakestoreapi.com/products')
-        .then(res=>res.json())
-        .then(json=> setProductos(json.map(productos => <Item key={productos.id} id={"Producto" + productos.id} data={productos}/>)))
+            .then(res => res.json())
+            .then(json => setProductos(json.map(productos => <Item key={productos.id} id={"Producto" + productos.id} data={productos} />)))
+
+
+
     }
-,[])
+        , [])
 
 
 
-//Tenemos un retraso de informacion
+    //Tenemos un retraso de informacion
 
 
-    return(
-            <div>
-                <p>Mi ItemList,Gabriel Galvez</p>
-                {productos}
-            </div>
+    return (
+        <div>
+            <p>Mi ItemList,Gabriel Galvez</p>
+            {productos}
+        </div>
     )
 }
-        /*Exportacion*/
-        export default ItemList;
+/*Exportacion*/
+export default ItemList;

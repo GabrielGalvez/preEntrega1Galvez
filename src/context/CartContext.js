@@ -17,7 +17,15 @@ const CartProvider = ({children}) => {
     const [items, setItems] = useState([])
 
     //funciones de nuestro CartProvider
+    console.log(items);
 
+    const listaDeCarrito= () => {
+        return items
+    }
+
+    const cantidadDeItemsEnElCarrito= () =>{
+        return items.length
+    }
 
     const agregarAlCarrito = (data) => {
 
